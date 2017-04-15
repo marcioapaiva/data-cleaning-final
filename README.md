@@ -31,19 +31,27 @@ and activities.
 
 
 <a name="fn1">1</a>: According to the requirements:
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-	This is worded in a somewhat open way so we had to draw the line somewhere. This was interpreted as "only means and stds should be extracted".
+
+> 2. Extracts only the measurements on the mean and standard deviation for each measurement.
+
+This is worded in a somewhat open way so we had to draw the line somewhere. This was interpreted as "only means and stds should be extracted", therefore:
 	- Angles were removed since they aren't exactly a proper mean or std
 	- MeanFreq's were included since they are a weighted means of frequency components.
 
 <a name="fn2">2</a>: According to the requirements:
-3. Uses descriptive activity names to name the activities in the data set
-	In the original dataset, activities correspond to number in the [1,6] range, corresponding respectively to "WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING". The new - tidy - dataset uses directly the names "Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying".
+
+> 3. Uses descriptive activity names to name the activities in the data set
+
+In the original dataset, activities correspond to number in the [1,6] range, corresponding respectively to "WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING". The new - tidy - dataset uses directly the names "Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying".
 
 <a name="fn3">3</a>: According to the requirements:
-4. Appropriately labels the data set with descriptive variable names.
-	Parenthesis were removed and dashes were transformed to dots, to make the variables easier to work with in R (i.e. not requiring backticks to escape their names).
+
+> 4. Appropriately labels the data set with descriptive variable names.
+
+Parenthesis were removed and dashes were transformed to dots, to make the variables easier to work with in R (i.e. not requiring backticks to escape their names).
 
 <a name="fn4">4</a>: According to the requirements:
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-	The first dataset was grouped by subject and activity, using the group_by function, and then fed to the summarise function for average calculation for each group. The names of each of the new columns is the old name concatenated with ".".
+
+> 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+The first dataset was grouped by subject and activity, using the group_by function, and then fed to the summarise function for average calculation for each group. The names of each of the new columns is the old name concatenated with ".".
