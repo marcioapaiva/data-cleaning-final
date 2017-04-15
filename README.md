@@ -1,9 +1,11 @@
 # Project
-This is the final project for Getting and Cleaning Data course.
+This is the final project for the Getting and Cleaning Data course, on Coursera.
 
 The script 'run_analysys.R' is responsible for doing the data cleaning. It assumes the data, available in "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", is contained (unzipped) in a directory named "UCI HAR Dataset" in the same level as the script. The data is originally from "http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones".
 
 The script tidies the data according to the project's requirements, and outputs the files har_data.tbl and har_data_means.tbl. The transformations are described below.
+
+The databases in the output are more thorougly described in the [CodeBook](CodeBook.md).
 
 ## Data Transformations
 
