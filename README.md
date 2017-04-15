@@ -11,31 +11,31 @@ and activities.
 
 - The name of the features is read from the "features.txt" file. The id for the non-duplicate features are selected, and the others are discarded. The names are used to name the columns of the har_data dataframe.
 
-- har_data columns are filtered to discard the ones we're not interested in. Only columns contained std or mean were kept, except if they represented an angle. See [*].
+- har_data columns are filtered to discard the ones we're not interested in. Only columns contained std or mean were kept, except if they represented an angle. See [^1].
 
 - subjects and activities vectors are incorporated to har_data as columns
 
-- The values in the activities column are changed from numbers to a descriptive label.
+- The values in the activities column are changed from numbers to a descriptive label. See [^2]
 
-- Columns are renamed to be easier to work with in R. See [***]
+- Columns are renamed to be easier to work with in R. See [^3]
 
-- A second data set is created from har_data, called har_data_means, that calculates the mean of each of the columns in har_data over each subject and each activity. See [****]
+- A second data set is created from har_data, called har_data_means, that calculates the mean of each of the columns in har_data over each subject and each activity. See [^4]
 
 
-[*] According to the requirements:
+[^1]: According to the requirements:
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 	This is worded in a somewhat open way so we had to draw the line somewhere. This was interpreted as "only means and stds should be extracted".
 	- Angles were removed since they aren't exactly a proper mean or std
 	- MeanFreq's were included since they are a weighted means of frequency components.
 
-[**] According to the requirements:
+[^2]: According to the requirements:
 3. Uses descriptive activity names to name the activities in the data set
 	In the original dataset, activities correspond to number in the [1,6] range, corresponding respectively to "WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING". The new - tidy - dataset uses directly the names "Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying".
 
-[***] According to the requirements:
+[^3]: According to the requirements:
 4. Appropriately labels the data set with descriptive variable names.
 	Parenthesis were removed and dashes were transformed to dots, to make the variables easier to work with in R (i.e. not requiring backticks to escape their names).
 
-[****] According to the requirements:
+[^4]: According to the requirements:
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 	The first dataset was grouped by subject and activity, using the group_by function, and then fed to the summarise function for average calculation for each group. The names of each of the new columns is the old name concatenated with ".".
