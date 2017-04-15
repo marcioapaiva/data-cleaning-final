@@ -35,6 +35,7 @@ and activities.
 > 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 
 This is worded in a somewhat open way so we had to draw the line somewhere. This was interpreted as "only means and stds should be extracted", therefore:
+
 	- Angles were removed since they aren't exactly a proper mean or std
 	- MeanFreq's were included since they are a weighted means of frequency components.
 
@@ -54,4 +55,4 @@ Parenthesis were removed and dashes were transformed to dots, to make the variab
 
 > 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The first dataset was grouped by subject and activity, using the group_by function, and then fed to the summarise function for average calculation for each group. The names of each of the new columns is the old name concatenated with ".".
+The first dataset was grouped by subject and activity, using the group_by function, and then fed to the summarise function for average calculation for each group. The names of each of the new columns is the old name concatenated with ".mean".
