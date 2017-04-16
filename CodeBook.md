@@ -4,6 +4,8 @@ Describes the format of the data output from the `run_analysis.R` script. The [R
 
 The features for the original database are described in the [UCI Website](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
+All of the measurements have been normalized.
+
 # har_data
 The variables in the dataset come from measurements on a set of 30 subjects doing a range of 6 activities each (Walking Upstairs, Walking Downstairs...). The variables "subject" and "activity" indicate the subject and activity being referred to, while the others are calculated from the raw accelerometer and gyroscope signals, captured at 50Hz.
 
