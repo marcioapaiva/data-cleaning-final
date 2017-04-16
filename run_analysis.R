@@ -77,8 +77,8 @@
   colnames(har_data_means) <- gsub("_mean$", ".mean", colnames(har_data_means))
   
   # Outputs the datasets to files
-  write.table(har_data, "har_data.tbl", row.name=FALSE)
-  write.table(har_data_means, "har_data_means.tbl", row.name=FALSE)
+  write.table(har_data, "har_data.txt", row.name=FALSE)
+  write.table(har_data_means, "har_data_means.txt", row.name=FALSE)
   
   # Exports har_data and har_data_means to global namespace
   har_data <<- har_data

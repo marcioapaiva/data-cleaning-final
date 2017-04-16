@@ -3,9 +3,9 @@ This is the final project for the Getting and Cleaning Data course, on Coursera.
 
 The script [run_analysys.R](run_analysys.R) is responsible for doing the data cleaning. It assumes the data, available in https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip, is contained (unzipped) in a directory named "UCI HAR Dataset" in the same level as the script. The data is originally from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 
-The script tidies the data according to the project's requirements, and outputs the files har_data.tbl and har_data_means.tbl. The transformations are described below. The output files can be read using a command such as
+The script tidies the data according to the project's requirements, and outputs the files har_data.txt and har_data_means.txt. The transformations are described below. The output files can be read using a command such as
 
-`data <- read.table("har_data_means.tbl", header = TRUE)`
+`data <- read.table("har_data_means.txt", header = TRUE)`
 
 The databases in the output are more thorougly described in the [CodeBook](CodeBook.md).
 
@@ -38,8 +38,8 @@ and activities.
 
 This is worded in a somewhat open way so we had to draw the line somewhere. This was interpreted as "only means and stds should be extracted", therefore:
 
-	- Angles were removed since they aren't exactly a proper mean or std
-	- MeanFreq's were included since they are a weighted means of frequency components.
+- Angles were removed since they aren't exactly a proper mean or std
+- MeanFreq's were included since they are a weighted means of frequency components.
 
 <a name="fn2">2</a>: According to the requirements:
 
